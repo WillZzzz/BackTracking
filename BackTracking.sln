@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KnightsProblem", "BackTracking\KnightsProblem.csproj", "{EF4A5C66-C6DA-495F-8FF4-5FD5D653A0C7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KnightsProblem", "KnightsProblem\KnightsProblem.csproj", "{EF4A5C66-C6DA-495F-8FF4-5FD5D653A0C7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
