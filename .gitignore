@@ -7,3 +7,9 @@ KnightsProblem/bin/Debug/BackTracking.vshost.exe.manifest
 KnightsProblem/bin/Debug/BackTracking.vshost.exe.config
 KnightsProblem/bin/Debug/BackTracking.exe.config
 KnightsProblem/Properties/AssemblyInfo.cs
+*.manifest
+*.config
+Sudoku/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
+Sudoku/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
+Sudoku/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
+Sudoku/obj/Debug/Sudoku.csproj.FileListAbsolute.txt
