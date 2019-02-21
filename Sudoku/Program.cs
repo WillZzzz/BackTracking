@@ -25,23 +25,29 @@ namespace Sudoku
             return false;
         }
 
+        static bool IsComplete()
+        {
+            for (int i = 0; i < _size; i++)
+            {
+                for (int j = 0; j < _size; j++)
+                    if (_sudoku[i, j] == 0) return false;
+            }
+            return true;
+        }
+
         static bool Helper(int x, int y)
         {
-            if (x == _size - 1 && y == _size - 1) return true;
+            if (IsComplete()) return true;
 
-            if (_sudoku[x, y] != 0) return true;
+            int nextX = x + (y + 1)/_size;
+            int nextY = (y + 1)%_size;
+
+            if (_sudoku[x, y] != 0) return Helper(nextX, nextY);
 
             for (int i = 1; i <= 9; i++)
             {
                 if (IsSafe(x, y, i))
                 {
-                    int nextX = x;
-                    int nextY = y + 1;
-                    if (y == _size - 1)
-                    {
-                        nextX = x + 1;
-                        nextY = 0;
-                    }
                     _sudoku[x, y] = i;
                     Console.WriteLine("[" + x + ", " + y + "] : " + i);
                     if (Helper(nextX, nextY))
@@ -101,8 +107,8 @@ namespace Sudoku
         public static T[] GetBlock<T>(T[,] matrix, int x, int y)
         {
             int blockSize = (int) Math.Sqrt(_size);
-            int blockX = x % blockSize;
-            int blockY = y % blockSize;
+            int blockX = x / blockSize;
+            int blockY = y / blockSize;
 
             T[] block = new T[blockSize * blockSize];
 
